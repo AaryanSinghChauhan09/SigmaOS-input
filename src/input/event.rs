@@ -14,9 +14,9 @@
 //!
 //! # Usage
 //!
-//! ```
-//! use sigmaos::input::event::{InputEventReader, InputEvent, InputEventType, InputCode};
-//! use sigmaos::input::InputDeviceManager;
+//! ```rust,ignore
+//! use sigmaos_input::event::{InputEventReader, InputEvent, InputEventType, InputCode};
+//! use sigmaos_input::InputDeviceManager;
 //!
 //! let manager = InputDeviceManager::new();
 //! let mut reader = InputEventReader::new("/dev/input/event0");

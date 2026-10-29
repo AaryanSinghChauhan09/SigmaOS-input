@@ -3,4 +3,5 @@
 
 pub mod input;
 
-pub use input::InputManager;
+pub use input::*;
+pub use input::InputDeviceManager as InputManager;
