@@ -1,17 +1,14 @@
 [package]
-name = "sigmaos-input"
+name = "input"
 version = "0.1.0"
 edition = "2021"
-authors = ["SigmaOS Project"]
-description = "Input device management (keyboard, mouse, touch)"
-license = "GPL-3.0-or-later"
+description = "SigmaOS SigmaOS-input"
+license = "MIT"
 repository = "https://github.com/AaryanSinghChauhan09/SigmaOS-input"
-readme = "README.md"
-keywords = ["input", "keyboard", "mouse"]
-categories = ["os"]
 
 [dependencies]
-sigmaos-kernel = { version = "0.1", path = "../SigmaOS-kernel" }
-
-[profile.release]
-opt-level = 3
+tokio = { version = "1.35", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+log = "0.4"
+anyhow = "1.0"
+clap = { version = "4.5", features = ["derive"] }

@@ -1,7 +1,12 @@
-//! SigmaOS Input
-//! Input device management (keyboard, mouse, touch)
+use anyhow::Result;
+use serde::Serialize;
 
-pub mod input;
+#[derive(Debug, Clone, Serialize)]
+pub struct Config { pub enabled: bool }
+impl Default for Config { fn default() -> Self { Self { enabled: true } } }
 
-pub use input::*;
-pub use input::InputDeviceManager as InputManager;
+pub struct input { config: Config }
+impl input {
+    pub fn new(config: Config) -> Self { Self { config } }
+    pub fn initialize(&mut self) -> Result<()> { Ok(()) }
+}
